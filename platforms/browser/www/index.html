@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Smart Mouse Trap</title>
+  <link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,300,600' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" type="text/css" href="css/index.css" />
+  <script type="text/javascript" src="http://cdn.jsdelivr.net/particle-api-js/5/particle.min.js"></script>
+<script src="http://mymaplist.com/js/vendor/TweenLite.min.js"></script>
+</head>
+
+
+<body id="body">
+<ul>
+  <li><button class="nav-button" id="nav_home">Home</button></li>
+  <li><button class="nav-button" id="nav_temperature">Temperature</button></li>
+  <li><button class="nav-button" id="customized">Settings</button></li>
+  <li class="logout"><button id="logout_button" class="nav-button">Log Out</button></li>
+</ul>
+	<div class="container" id="container">
+		<div id = "spinner" class="loader" hidden></div>
+		<div id="login" class="login">
+		  <div class="form">
+		  <div class="row-fluid user-row">
+              <img src="https://media.giphy.com/media/cBWUiekOJcXEQ/giphy.gif" class="img-responsive" alt="Conxole Admin"/>
+          </div>
+		      <input id="username" type="text" placeholder="username/email address"/>
+		      <input id="pwd" type="password" placeholder="password"/>
+		      <button id="nav_login">login</button>
+		   </div>
+		</div>
+
+   
+		<div id="door" class="page">
+			<div class="door">
+				<span id="status">Device offline</span> <br>
+				<span id="tempDis">Temperature Not Set</span>
+				<p></p>
+				<button id="open">open</button>
+			</div>
+		</div>
+
+		<div id="temp" class="page">
+		  <div class="form">
+		      <input id="tempInput" type="number" placeholder="temperature in F"/>
+		      <button id="setTemp">Set Garage Temperature</button>
+		  </div>
+		</div>
+		<div id="setting" class="page">
+		  <div class="form">
+		      <input id="buzz" type="text" placeholder="buzz in second"/>
+		      <button id="setBuzz">Set Buzz Time</button>
+		  </div>    
+		  <div class="radioText">  
+		  		<span>Child Mode</span> <br>
+		  		<span>    </span><br>
+		      <input id="locked" type="checkbox"/> Lock the door
+		  </div>
+
+		</div>
+	</div>
+	<script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/particle.min.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+</body>
+</html>
